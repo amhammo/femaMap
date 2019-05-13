@@ -1,7 +1,15 @@
 $("body").on("change", "input[name='toggle']", function (e) {
 	let disaster = $("input[name='toggle']:checked").attr("id");
+	if (disaster === 'earthquake') {
+		map.flyTo({ center: [-150.460084, 61.914779], zoom: 3.30, speed: 0.7 });
+	} else if (disaster === 'volcano') {
+		map.flyTo({ center: [-155.705549, 20.790428], zoom: 5.18, speed: 0.7 });
+	} else {
+		map.flyTo({ center: [-98.454838, 39.186895], zoom: 3.00, speed: 0.7 });
+	}
 
 	let selection = $(`.${disaster}`);
+
 
 	// $("input[type='checkbox']:checked").each(function () {
 	// 	const $this_checkbox = $(this),

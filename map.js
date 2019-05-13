@@ -1,10 +1,10 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoibG9iZW5pY2hvdSIsImEiOiJjajdrb2czcDQwcHR5MnFycmhuZmo4eWwyIn0.nUf9dWGNVRnMApuhQ44VSw';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW1vbnJvZWhhbW1vbmQiLCJhIjoiY2pvb3lqeTlvMGhqZzNxbDFhdmRjdjFkYSJ9.5lXQk4Y6bwkZNL8FlCD9rg';
 
 const map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/dark-v9',
-	center: [-93.278171, 39.415936],
-	zoom: 3.40
+	center: [-98.454838, 39.186895],
+	zoom: 3.00
 });
 
 const disaster_toggle = (disaster) => {
@@ -28,7 +28,7 @@ const disaster_toggle = (disaster) => {
 map.on("load", () => {
 	map.addSource("disasterData", {
 		type: 'vector',
-		url: 'mapbox://lobenichou.5xljw23n'
+		url: 'mapbox://amonroehammond.cjvfa9pb412kl2xmwfp8mxggr-6yl2k'
 	});
 
 	console.log(map);
@@ -37,7 +37,7 @@ map.on("load", () => {
 		"id": "states-fill",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#",
 			"fill-opacity": 0.5
@@ -48,7 +48,7 @@ map.on("load", () => {
 		"id": "states-line",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#3e3e3e",
 		}
@@ -58,7 +58,7 @@ map.on("load", () => {
 		"id": "states-fill-flood",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#5EA4BF",
 			"fill-opacity": 0.5
@@ -73,7 +73,7 @@ map.on("load", () => {
 		"id": "states-line-flood",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -87,7 +87,7 @@ map.on("load", () => {
 		"id": "states-fill-hurricane",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#174d71",
 			"fill-opacity": 0.5
@@ -102,7 +102,7 @@ map.on("load", () => {
 		"id": "states-line-hurricane",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -115,7 +115,7 @@ map.on("load", () => {
 		"id": "states-fill-fire",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#d93d04",
 			"fill-opacity": 0.5
@@ -130,7 +130,7 @@ map.on("load", () => {
 		"id": "states-line-fire",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -144,7 +144,7 @@ map.on("load", () => {
 		"id": "states-fill-earthquake",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#539032",
 			"fill-opacity": 0.5
@@ -159,7 +159,7 @@ map.on("load", () => {
 		"id": "states-line-earthquake",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -173,7 +173,7 @@ map.on("load", () => {
 		"id": "states-fill-coastal_storm",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#1583c1",
 			"fill-opacity": 0.5
@@ -188,7 +188,7 @@ map.on("load", () => {
 		"id": "states-line-coastal_storm",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -202,7 +202,7 @@ map.on("load", () => {
 		"id": "states-fill-mud",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "brown",
 			"fill-opacity": 0.5
@@ -217,7 +217,7 @@ map.on("load", () => {
 		"id": "states-line-mud",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -231,7 +231,7 @@ map.on("load", () => {
 		"id": "states-fill-severe_storm",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#37748C",
 			"fill-opacity": 0.5
@@ -246,7 +246,7 @@ map.on("load", () => {
 		"id": "states-line-severe_storm",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -260,7 +260,7 @@ map.on("load", () => {
 		"id": "states-fill-snow",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "gray",
 			"fill-opacity": 0.5
@@ -275,7 +275,7 @@ map.on("load", () => {
 		"id": "states-line-snow",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -289,7 +289,7 @@ map.on("load", () => {
 		"id": "states-fill-tornado",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#bf996b",
 			"fill-opacity": 0.5
@@ -304,7 +304,7 @@ map.on("load", () => {
 		"id": "states-line-tornado",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},
@@ -318,7 +318,7 @@ map.on("load", () => {
 		"id": "states-fill-volcano",
 		"type": "fill",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"fill-color": "#f2620f",
 			"fill-opacity": 0.5
@@ -333,7 +333,7 @@ map.on("load", () => {
 		"id": "states-line-volcano",
 		"type": "line",
 		"source": "disasterData",
-		"source-layer": "finalDataWithStates-8dm4f6",
+		"source-layer": "finalDataWithStates",
 		"paint": {
 			"line-color": "#ffffff",
 		},

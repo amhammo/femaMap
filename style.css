@@ -156,26 +156,35 @@ img {
 
 #mapContainer {
     width: 100%;
+    max-width: 1200px;
     min-height: 100vh;
+    margin: 0 auto;
     position: relative;
 }
 
 #map {
     position: absolute;
     top: 0;
-    left: 5%;
+    left: 0;
     height: 100%;
-    width: 90%;
+    width: 100%;
     z-index: 1;
 }
 
 #filters {
     position: absolute;
-    bottom: 5%;
-    right: 11%;
-    width: 20%;
+    bottom: 0;
+    right: 0;
+    width: 100%;
     z-index: 2;
     color: #FFF;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    line-height: 1.5em;
+}
+
+.check_grid label {
+    display: block;
 }
 
 /*Special Rules for Mobile*/
@@ -193,12 +202,8 @@ img {
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
-
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-    .check_grid div {
-        padding-left: 63px;
-    }
 }
 
 /*********************************************************************
@@ -206,7 +211,19 @@ img {
 *********************************************************************/
 @media(min-width: 729px) {
     #mobile {
-        display: none
+        display: none;
+    }
+
+    .check_grid>div {
+        padding: 10px;
+        text-align: center;
+    }
+
+    #filters {
+        right: 1%;
+        width: 25%;
+        line-height: 1.2em;
+        bottom: 10%;
     }
 
     /* Any adjustments for desktop and larger go here.

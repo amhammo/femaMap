@@ -1,11 +1,17 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW1vbnJvZWhhbW1vbmQiLCJhIjoiY2pvb3lqeTlvMGhqZzNxbDFhdmRjdjFkYSJ9.5lXQk4Y6bwkZNL8FlCD9rg';
 
-const map = new mapboxgl.Map({
+
+let mapOptions = {
 	container: 'map',
 	style: 'mapbox://styles/mapbox/dark-v9',
 	center: [-98.454838, 39.186895],
 	zoom: 3.00
-});
+};
+
+if (is_mobile) {
+	mapOptions.zoom = 2.00;
+}
+const map = new mapboxgl.Map(mapOptions);
 
 const disaster_toggle = (disaster) => {
 	const layers = map.getStyle().layers.filter((o) => {
